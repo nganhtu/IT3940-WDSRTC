@@ -12,7 +12,7 @@ public class WdsrtcApplication {
 	@Bean
 	public SocketIOServer socketIOServer() {
 		Configuration config = new Configuration();
-		config.setHostname("wdsrtc.herokuapp.com");
+		config.setHostname("localhost");
 		config.setPort(9092);
 		return new SocketIOServer(config);
 	}
