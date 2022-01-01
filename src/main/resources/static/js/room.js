@@ -1,4 +1,4 @@
-const socket = io("")
+const socket = io("https://wdsrtc.herokuapp.com")
 
 const myPeer = new Peer(undefined, {
     host: '/',
