@@ -5,8 +5,6 @@ const myPeer = new Peer(undefined, {
     port: '3001'
 })
 
-const userGrid = document.getElementById('user-grid')
-
 const videoGrid = document.getElementById('video-grid')
 const myVideo = document.createElement('video')
 myVideo.muted = true    // not listen to my own voice
@@ -31,7 +29,6 @@ navigator.mediaDevices.getUserMedia({
         // https://github.com/WebDevSimplified/Zoom-Clone-With-WebRTC/issues/52
         setTimeout(() => {
             connectToNewUser(userId, stream)
-            userGrid.append("Another join: " + userId + " ~ ")
         }, 1000);
     })
 })
@@ -44,7 +41,6 @@ socket.on('user-disconnected', userId => {
 
 myPeer.on('open', id => {
     socket.emit('join-room', ROOM_ID.concat(" ").concat(id))
-    userGrid.append("This is me: " + id + " ~ ")
 })
 
 function addVideoStream(video, stream) {
