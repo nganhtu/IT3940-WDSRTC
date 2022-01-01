@@ -1,4 +1,4 @@
-const socket = io("http://localhost:9091")
+const socket = io("http://localhost:9092")
 
 const myPeer = new Peer(undefined, {
     host: '/',
