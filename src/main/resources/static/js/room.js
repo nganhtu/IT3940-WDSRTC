@@ -1,9 +1,6 @@
 const socket = io("http://localhost:9092")
 
-const myPeer = new Peer(undefined, {
-    host: '/',
-    port: '3001'
-})
+const myPeer = new Peer(undefined, {}) // use default server (PeerServer Cloud Service)
 
 const videoGrid = document.getElementById('video-grid')
 const myVideo = document.createElement('video')
