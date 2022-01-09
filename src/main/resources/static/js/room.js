@@ -1,4 +1,4 @@
-const socket = io("https://wdsrtc.herokuapp.com:443")
+const socket = io("https://wdsrtc.herokuapp.com:9092")
 
 const myPeer = new Peer(undefined, {}) // use default server (PeerServer Cloud Service)
 
