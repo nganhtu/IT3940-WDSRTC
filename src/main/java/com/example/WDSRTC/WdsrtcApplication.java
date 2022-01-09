@@ -12,7 +12,7 @@ public class WdsrtcApplication {
 	@Bean
 	public SocketIOServer socketIOServer() {
 		Configuration config = new Configuration();
-		config.setPort(9092);
+		config.setPort(443);
 		return new SocketIOServer(config);
 	}
 
