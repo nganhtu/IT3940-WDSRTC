@@ -1,4 +1,4 @@
-const socket = io("http://localhost:9092")
+const socket = io()
 
 const myPeer = new Peer(undefined, {}) // use default server (PeerServer Cloud Service)
 
