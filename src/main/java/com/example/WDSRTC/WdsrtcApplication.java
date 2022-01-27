@@ -13,6 +13,7 @@ public class WdsrtcApplication {
 	public SocketIOServer socketIOServer() {
 		Configuration config = new Configuration();
 		config.setPort(9092);
+		config.setOrigin("http://localhost:3000");
 		return new SocketIOServer(config);
 	}
 
