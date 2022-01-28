@@ -13,7 +13,7 @@ public class WdsrtcApplication {
 	public SocketIOServer socketIOServer() {
 		Configuration config = new Configuration();
 		config.setPort(9092);
-		config.setOrigin("https://wdsrtc-client.herokuapp.com");
+		config.setOrigin("*");
 		return new SocketIOServer(config);
 	}
 
